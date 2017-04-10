@@ -15,6 +15,9 @@ class Grocerystats:
     def add_quantity(self, quantity):
         self.total_quantity = self.total_quantity + quantity
 
+    def calculate_average(self):
+        return self.total_quantity/self.total_sales
+
     def handle_message(self, message, *args):
         # create dictionary from socket's JSON string
         datadict = json.loads(message)
@@ -33,5 +36,6 @@ class Grocerystats:
                 pass
 
         print(self)
+        return self.calculate_average()
 
 

@@ -21,14 +21,27 @@ class GrocerystatsTest(unittest.TestCase):
     # test add_quantity method
     def test_add_quantity(self):
         grocery = Grocerystats('fruit')
-        grocery.add_quantity()
-        grocery.add_quantity()
+        grocery.add_quantity(1)
+        grocery.add_quantity(1)
 
         self.assertEqual(grocery.total_quantity, 2)
+
+    # test calculate_average method
+    def test_calculate_average(self):
+        grocery = Grocerystats('fruit')
+        grocery.add_quantity(1)
+        grocery.add_quantity(1)
+        grocery.add_quantity(1)
+        grocery.add_quantity(1)
+        grocery.add_sale()
+        grocery.add_sale()
+
+        self.assertEqual(grocery.calculate_average(), 2)
 
     # not testing message string to json conversion, assuming json.loads() works
 
     # test 'cart' isolation
+    # QUESTION: Is this too granular of a test?
     def test_cart_isolation(self):
 
         # from sample data in problem's .pdf
@@ -51,4 +64,5 @@ class GrocerystatsTest(unittest.TestCase):
                     "type": "fruit",
                     "quantity": 3}, {}])
 
+#    def test_handle_message(self):
 
