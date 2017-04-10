@@ -7,7 +7,7 @@ class Grocerystats:
         self.total_quantity = 0
 
     def __repr__(self):
-        return 'total sales: {}, total quantity: {} \naverage {}/sale: {}'.format(self.total_sales, self.total_quantity, self.type, self.total_quantity/self.total_sales)
+        return 'total sales: {}, total quantity of {}: {} \naverage {}/sale: {}'.format(self.total_sales, self.type, self.total_quantity, self.type, self.total_quantity/self.total_sales)
 
     def add_sale(self):
         self.total_sales = self.total_sales + 1
@@ -21,7 +21,7 @@ class Grocerystats:
 
         # isolate list of customer order
         cart = datadict['cart']
-        print('order: {}'.format(cart))
+        # print('order: {}'.format(cart))
 
         # increment total sales
         self.add_sale()
