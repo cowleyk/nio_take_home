@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="284">
-              <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="grocerystats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grocerystats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+            <state relative-caret-position="74">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -109,8 +109,52 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittest GrocerystatsTest.test_calculate_average">
-    <configuration default="false" name="Unittest GrocerystatsTest.test_cart_isolation" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in test">
+    <configuration default="false" name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="niotakehome" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest GrocerystatsTest.test_handle_message" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="niotakehome" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="CLASS_NAME" value="GrocerystatsTest" />
+      <option name="METHOD_NAME" value="test_handle_message" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest GrocerystatsTest.test_cart_isolation (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -164,50 +208,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest GrocerystatsTest.test_calculate_average" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="niotakehome" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="CLASS_NAME" value="GrocerystatsTest" />
-      <option name="METHOD_NAME" value="test_calculate_average" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest GrocerystatsTest.test_add_quantity" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="niotakehome" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="CLASS_NAME" value="GrocerystatsTest" />
-      <option name="METHOD_NAME" value="test_add_quantity" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -345,19 +345,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_cart_isolation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.grocerystats" />
-      <item index="2" class="java.lang.String" itemvalue="Python.app" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_calculate_average" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_add_quantity" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_handle_message" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_cart_isolation (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.grocerystats" />
+      <item index="4" class="java.lang.String" itemvalue="Python.app" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_calculate_average" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_add_quantity" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_handle_message" />
         <item index="2" class="java.lang.String" itemvalue="Python.app" />
         <item index="3" class="java.lang.String" itemvalue="Python.grocerystats" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_cart_isolation" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest GrocerystatsTest.test_cart_isolation (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -375,35 +375,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_GrocerystatsTest_test_add_quantity - 2017.04.10 at 14h 18m 59s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_quantity" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 35m 53s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_add_quantity - 2017.04.10 at 14h 19m 13s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_quantity" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 39m 16s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_add_quantity - 2017.04.10 at 14h 19m 27s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_quantity" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 39m 35s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_add_sale - 2017.04.10 at 13h 58m 13s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_sale" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 40m 29s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_add_sale - 2017.04.10 at 14h 00m 06s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_sale" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 40m 57s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_add_sale_(1) - 2017.04.10 at 14h 00m 55s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_add_sale (1)" configurationId="tests" />
+    <history-entry file="Unittest_GrocerystatsTest_test_handle_message - 2017.04.10 at 14h 41m 46s.xml">
+      <configuration name="Unittest GrocerystatsTest.test_handle_message" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_calculate_average - 2017.04.10 at 14h 18m 12s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_calculate_average" configurationId="tests" />
+    <history-entry file="Unittests_in_test - 2017.04.10 at 14h 34m 39s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_calculate_average - 2017.04.10 at 14h 19m 57s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_calculate_average" configurationId="tests" />
+    <history-entry file="Unittests_in_test - 2017.04.10 at 14h 35m 39s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_cart_isolation - 2017.04.10 at 14h 11m 21s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_cart_isolation" configurationId="tests" />
+    <history-entry file="Unittests_in_test - 2017.04.10 at 14h 41m 37s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_GrocerystatsTest_test_create_grocery_(1) - 2017.04.10 at 13h 59m 08s.xml">
-      <configuration name="Unittest GrocerystatsTest.test_create_grocery (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_test - 2017.04.10 at 14h 42m 59s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -449,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grocerystats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state relative-caret-position="74">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -458,7 +458,7 @@
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
-          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

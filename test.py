@@ -1,5 +1,6 @@
 from grocerystats import Grocerystats
 import unittest
+import json
 
 class GrocerystatsTest(unittest.TestCase):
 
@@ -64,5 +65,15 @@ class GrocerystatsTest(unittest.TestCase):
                     "type": "fruit",
                     "quantity": 3}, {}])
 
-#    def test_handle_message(self):
+    def test_handle_message(self):
+        message = {"shopper": {"name": "John Smith","gender": "male"},"amount": 47.12,"cart": [{"name": "apple","type": "fruit","quantity": 4}, {"name": "orange","type": "fruit","quantity": 2}]}
+        messagetwo = {"shopper": {"name": "John Smith","gender": "male"},"amount": 47.12,"cart": [{"name": "apple","type": "fruit","quantity": 3}, {"name": "carrot","type": "vegetable","quantity": 3}]}
+
+        message_json = json.dumps(message)
+        messagetwo_json = json.dumps(messagetwo)
+        grocery = Grocerystats('fruit')
+        grocery.handle_message(message_json)
+
+        self.assertEqual(grocery.handle_message(messagetwo_json), 4.5)
+
 
