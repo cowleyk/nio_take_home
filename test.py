@@ -17,3 +17,9 @@ class GrocerystatsTest(unittest.TestCase):
 
         self.assertEqual(grocery.total_sales, 2)
 
+    def test_add_quantity(self):
+        grocery = Grocerystats('fruit')
+        grocery.add_quantity()
+        grocery.add_quantity()
+
+        self.assertEqual(grocery.total_quantity, 2)
