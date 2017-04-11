@@ -6,6 +6,7 @@ class Grocerystats:
         self.total_sales = 0
         self.total_quantity = 0
         self.total_amount = 0
+        self.total_male = 0
 
 
     def __repr__(self):
@@ -42,6 +43,23 @@ class Grocerystats:
 
         print('average amount: {}'.format(average_amount))
         return average_amount
+
+
+    def customer_stats(self, message, *args):
+        datadict = json.loads(message)
+        shopper = datadict['shopper']
+        print('shopper: {}'.format(shopper))
+
+        self.add_sale()
+
+        if shopper['gender'] == 'male':
+            self.total_male = self.total_male + 1
+
+        # QUESTION: does only tracking one gender save more than negligible space?
+        percent_male = (self.total_male/self.total_sales)*100
+        percent_female = 100 - percent_male
+
+        print('% male shoppers: {} \n% female shoppers: {}'.format(percent_male, percent_female))
 
 
     def handle_message(self, message, *args):

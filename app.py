@@ -11,7 +11,7 @@ grocery = Grocerystats('fruit')
 
 with SocketIO(SOCKET_HOST) as sock:
     # Set up our message handler
-    sock.on('recvData', grocery.handle_message)
+    sock.on('recvData', grocery.customer_stats)
     # Join the "fruits" room
     sock.emit('ready', 'groceries')
     # Wait for messages to come through! Ctrl-C to quit
