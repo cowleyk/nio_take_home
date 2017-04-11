@@ -2,6 +2,7 @@ from grocerystats import Grocerystats
 import unittest
 import json
 
+
 class GrocerystatsTest(unittest.TestCase):
 
     # test class creation
