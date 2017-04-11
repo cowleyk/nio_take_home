@@ -1,12 +1,19 @@
 import json
 
 class Grocerystats:
+    # make type parameter into list, loop over in handle_message && display accordingly
     def __init__(self, type):
         self.type = type
         self.total_sales = 0
+        # need to make quantity into a dictionary; type:quantity
         self.total_quantity = 0
         self.total_amount = 0
         self.total_male = 0
+
+        self.quantity_obj = {}
+        for type in type:
+            self.quantity_obj[type] = 0
+            # print(self.quantity_obj)
 
 
     def __repr__(self):
@@ -26,7 +33,11 @@ class Grocerystats:
 
 
     def calculate_average(self):
-        return self.total_quantity/self.total_sales
+        # return self.total_quantity/self.total_sales
+        average_of_type_obj = {}
+        for label in self.quantity_obj:
+            average_of_type_obj[label] = self.quantity_obj[label]/self.total_sales
+        return average_of_type_obj
 
 
     def calculate_average_amount(self, message, *args):
@@ -68,7 +79,7 @@ class Grocerystats:
 
         # isolate list of customer order
         cart = datadict['cart']
-        print('order: {}'.format(datadict))
+        # print('message: {}'.format(datadict))
 
         # increment total sales
         self.add_sale()
@@ -81,5 +92,28 @@ class Grocerystats:
 
         print(self)
         return self.calculate_average()
+
+    def handle_message_two(self, message, *args):
+        # create dictionary from socket's JSON string
+        datadict = json.loads(message)
+
+        # isolate list of customer order
+        cart = datadict['cart']
+        # print('message: {}'.format(datadict))
+
+        # increment total sales
+        self.add_sale()
+        # loop over items and add sum appropriate quantity
+        for item in cart:
+            if item['type'] in self.type:
+                self.quantity_obj[item['type']] = self.quantity_obj[item['type']] + item['quantity']
+            else:
+                pass
+
+        for type_average in self.calculate_average():
+            print('average {} per sale: {}'.format(type_average, self.calculate_average()[type_average]))
+        print('')
+        return self.calculate_average()
+
 
 
