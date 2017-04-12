@@ -111,6 +111,8 @@ class Grocerystats:
 
         for type_average in self.calculate_average_two():
             # QUESTION: better memory-wise to just loop over quantity_obj and do quantity/sales inside .format()?
-            print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
+            if type_average in self.type:
+                print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
+        print('average total per sale: {}'.format(self.calculate_average_two()['total']))
         print('')
         return self.calculate_average_two()
