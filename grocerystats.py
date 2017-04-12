@@ -36,7 +36,6 @@ class Grocerystats:
 
 
     def calculate_average_two(self):
-        # return self.total_quantity/self.total_sales
         average_of_type_obj = {}
         for label in self.quantity_obj:
             average_of_type_obj[label] = self.quantity_obj[label]/self.total_sales
@@ -106,6 +105,7 @@ class Grocerystats:
         for item in cart:
             if item['type'] in self.type:
                 self.quantity_obj[item['type']] = self.quantity_obj[item['type']] + item['quantity']
+                self.quantity_obj['total'] = self.quantity_obj['total'] + item['quantity']
             else:
                 pass
 
@@ -113,24 +113,4 @@ class Grocerystats:
             # QUESTION: better memory-wise to just loop over quantity_obj and do quantity/sales inside .format()?
             print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
         print('')
-        return self.calculate_average_two()
-
-
-    def handle_message_two_totals(self, message, *args):
-        datadict = json.loads(message)
-
-        cart = datadict['cart']
-        print('cart: {}'.format(cart))
-
-        self.add_sale()
-        for item in cart:
-            if item['type'] in self.type:
-                self.quantity_obj['total'] = self.quantity_obj['total'] + item['quantity']
-            else:
-                pass
-
-        # for type_average in self.calculate_average_two():
-        #     print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
-        #     can loop inside .format()? want to print; 'average type1, type2, type3... per sale:
-        print('average per sale: {}'.format(self.quantity_obj['total']/self.total_sales))
         return self.calculate_average_two()
