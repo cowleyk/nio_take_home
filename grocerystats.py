@@ -5,12 +5,11 @@ class Grocerystats:
     def __init__(self, type):
         self.type = type
         self.total_sales = 0
-        # need to make quantity into a dictionary; type:quantity
         self.total_quantity = 0
         self.total_amount = 0
         self.total_male = 0
 
-        self.quantity_obj = {}
+        self.quantity_obj = {'total': 0}
         for type in type:
             self.quantity_obj[type] = 0
             # print(self.quantity_obj)
@@ -30,6 +29,7 @@ class Grocerystats:
 
     def add_amount(self, amount):
         self.total_amount = self.total_amount + amount
+
 
     def calculate_average(self):
         return self.total_quantity/self.total_sales
@@ -96,17 +96,13 @@ class Grocerystats:
         print(self)
         return self.calculate_average()
 
+
     def handle_message_two(self, message, *args):
-        # create dictionary from socket's JSON string
         datadict = json.loads(message)
 
-        # isolate list of customer order
         cart = datadict['cart']
-        # print('message: {}'.format(datadict))
 
-        # increment total sales
         self.add_sale()
-        # loop over items and add sum appropriate quantity
         for item in cart:
             if item['type'] in self.type:
                 self.quantity_obj[item['type']] = self.quantity_obj[item['type']] + item['quantity']
@@ -114,9 +110,27 @@ class Grocerystats:
                 pass
 
         for type_average in self.calculate_average_two():
+            # QUESTION: better memory-wise to just loop over quantity_obj and do quantity/sales inside .format()?
             print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
         print('')
         return self.calculate_average_two()
 
 
+    def handle_message_two_totals(self, message, *args):
+        datadict = json.loads(message)
 
+        cart = datadict['cart']
+        print('cart: {}'.format(cart))
+
+        self.add_sale()
+        for item in cart:
+            if item['type'] in self.type:
+                self.quantity_obj['total'] = self.quantity_obj['total'] + item['quantity']
+            else:
+                pass
+
+        # for type_average in self.calculate_average_two():
+        #     print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
+        #     can loop inside .format()? want to print; 'average type1, type2, type3... per sale:
+        print('average per sale: {}'.format(self.quantity_obj['total']/self.total_sales))
+        return self.calculate_average_two()
