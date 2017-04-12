@@ -31,8 +31,11 @@ class Grocerystats:
     def add_amount(self, amount):
         self.total_amount = self.total_amount + amount
 
-
     def calculate_average(self):
+        return self.total_quantity/self.total_sales
+
+
+    def calculate_average_two(self):
         # return self.total_quantity/self.total_sales
         average_of_type_obj = {}
         for label in self.quantity_obj:
@@ -110,10 +113,10 @@ class Grocerystats:
             else:
                 pass
 
-        for type_average in self.calculate_average():
-            print('average {} per sale: {}'.format(type_average, self.calculate_average()[type_average]))
+        for type_average in self.calculate_average_two():
+            print('average {} per sale: {}'.format(type_average, self.calculate_average_two()[type_average]))
         print('')
-        return self.calculate_average()
+        return self.calculate_average_two()
 
 
 

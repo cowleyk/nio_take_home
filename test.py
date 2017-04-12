@@ -80,7 +80,7 @@ class GrocerystatsTest(unittest.TestCase):
 
     def test_calculate_average_amount(self):
         message = {"shopper": {"name": "John Smith","gender": "male"},"amount": 47.00,"cart": [{"name": "apple","type": "fruit","quantity": 4}, {"name": "orange","type": "fruit","quantity": 2}]}
-        messagetwo = {"shopper": {"name": "John Smith","gender": "male"},"amount": 53.00,"cart": [{"name": "apple","type": "fruit","quantity": 3}, {"name": "carrot","type": "vegetable","quantity": 3}]}
+        messagetwo = {"shopper": {"name": "John Smith","gender": "male"},"amount": 53.00,"cart": [{"name": "water","type": "beverage","quantity": 3}, {"name": "carrot","type": "vegetable","quantity": 3}]}
 
         message_json = json.dumps(message)
         messagetwo_json = json.dumps(messagetwo)
@@ -89,8 +89,13 @@ class GrocerystatsTest(unittest.TestCase):
         grocery.calculate_average_amount(message_json)
         self.assertEqual(grocery.calculate_average_amount(messagetwo_json), 50)
 
-
-
-
     def test_handle_message_two(self):
-        pass
+        message = {"shopper": {"name": "John Smith","gender": "male"},"amount": 47.00,"cart": [{"name": "apple","type": "fruit","quantity": 4}, {"name": "orange","type": "fruit","quantity": 2}]}
+        messagetwo = {"shopper": {"name": "John Smith","gender": "male"},"amount": 53.00,"cart": [{"name": "water","type": "beverage","quantity": 3}, {"name": "carrot","type": "vegetable","quantity": 3}]}
+
+        message_json = json.dumps(message)
+        messagetwo_json = json.dumps(messagetwo)
+        grocery = Grocerystats(['fruit', 'beverage', 'vegetable'])
+
+        grocery.handle_message_two(message_json)
+        self.assertEqual(grocery.handle_message_two(messagetwo_json), {'fruit': 3, 'beverage': 1.5, 'vegetable': 1.5})
